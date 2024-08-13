@@ -1,0 +1,198 @@
+footer {
+  .contacts {
+    .contacts__wrapper {
+      display: flex;
+      padding: 8.4rem 0 8.4rem;
+      gap: 2.8rem 3.2rem;
+
+      & > * {
+        display: flex;
+        flex-direction: column;
+      }
+
+      address dl {
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        align-items: center;
+        gap: 3.2rem 1.4rem;
+        margin-bottom: 3.2rem;
+        font-size: 2rem;
+        font-style: normal;
+
+        dt {
+          font-weight: 500;
+          text-transform: uppercase;
+          color: $accent;
+        }
+
+        dd {
+          font-weight: 400;
+          word-break: break-all;
+        }
+
+        a {
+          text-decoration: none;
+          color: currentColor;
+        }
+      }
+
+      .contacts__subscriptions {
+        form {
+          display: flex;
+          gap: 0.8rem;
+          width: 100%;
+
+          @include bp($bp1024-1, "max") {
+            .form-control {
+              flex-direction: row;
+              align-items: center;
+
+              .placeholder {
+                top: 0;
+                left: 16rem;
+              }
+            }
+          }
+
+          @include bp($bp768-1, "max") {
+            .form-control {
+              align-items: flex-start !important;
+              flex-direction: column;
+            }
+
+            .placeholder {
+              position: absolute;
+              top: 4.35rem !important;
+              left: 0 !important;
+            }
+          }
+
+          @include bp($bp1024, "min") {
+            .form-control {
+              flex-direction: column;
+            }
+
+            .placeholder {
+              position: absolute;
+              top: 4.35rem;
+            }
+          }
+        }
+
+        .form-control {
+          position: relative;
+          display: flex;
+          gap: 2rem;
+
+          input {
+            background-color: transparent;
+          }
+        }
+
+        .contacts__subscribe-submit {
+          align-self: flex-end;
+          width: 13.6rem;
+          padding: 1rem 0;
+          font-size: 1.8rem;
+          font-weight: 600;
+          text-transform: capitalize;
+          background-color: $warning;
+          color: $white;
+          cursor: pointer;
+          transition: 0.15s;
+
+          &:hover {
+            background-color: $warning-dark;
+          }
+
+          &:active {
+            background-color: $warning-active;
+          }
+        }
+      }
+    }
+
+    .contacts__social-links {
+      display: flex;
+      gap: 2rem;
+
+      li {
+        width: 4rem;
+        height: 4rem;
+
+        .social-icon {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    h3,
+    label {
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $accent;
+    }
+
+    h3 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .copyright {
+    padding: 2.5rem 0;
+    background-color: $accent;
+    color: $white;
+  }
+
+  .contacts__copyright {
+    font-size: 1.6rem;
+  }
+
+  @include bp($bp1024-1, "max") {
+    .contacts {
+      .contacts__wrapper {
+        flex-direction: column;
+        row-gap: 0;
+      }
+
+      .contacts__subscriptions {
+        form {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .contacts__social-links-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+
+    .logo__wrapper {
+      display: none;
+      position: absolute;
+      right: 1.2rem;
+      bottom: 0;
+    }
+  }
+
+  @include bp($bp1024, "min") {
+    .contacts__wrapper {
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    .contacts__subscribe {
+      margin-bottom: 4.6rem;
+    }
+  }
+  form {
+    margin-bottom: 2rem;
+  }
+}

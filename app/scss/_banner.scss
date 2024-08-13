@@ -1,0 +1,109 @@
+.banner {
+  background: url(../img/banner.jpg) center / cover no-repeat;
+  background-image: image-set(
+    url(../img/banner.jpg) 1x,
+    url(../img/banner@2x.jpg) 2x
+  );
+
+  &--adaptive {
+    margin-top: 9.2rem;
+  }
+}
+
+.banner__content {
+  position: relative;
+  height: 64.6rem;
+  display: flex;
+  flex-direction: column;
+
+  .banner__item:first-child {
+    flex-grow: 1;
+    align-content: center;
+  }
+
+  .banner__item:last-child {
+    display: flex;
+
+    @include bp($bp768, "min") {
+      justify-content: flex-end;
+    }
+
+    @include bp($bp768-1, "max") {
+      justify-content: center;
+    }
+  }
+
+  .banner__text {
+    align-content: center;
+
+    font-weight: 600;
+
+    @include bp($bp768-1, "max") {
+      width: auto;
+      font-size: 5.5rem;
+      text-align: center;
+    }
+
+    @include bp($bp768, "min") {
+      width: 55.6rem;
+      font-size: 7.2rem;
+    }
+  }
+
+  .slider {
+    max-width: 41.6rem;
+    width: 100%;
+    height: 19rem;
+    margin: 0;
+
+    @media screen and (min-width: 1440px) {
+      transform: translateX(11.2rem);
+    }
+
+    @media screen and (max-width: 1439.98px) {
+      transform: translateX(12px);
+    }
+
+    @include bp($bp768-1, "max") {
+      transform: translateX(0);
+    }
+
+    .swiper {
+      height: 100%;
+      max-width: 100%;
+    }
+
+    .slider__slide {
+      height: calc(100% - 4rem);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      color: $white;
+      background-color: $accent-light;
+      transition: 0.15s;
+
+      h3 {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      p {
+        flex-grow: 1;
+        font-size: 2.4rem;
+        text-align: center;
+      }
+    }
+
+    &:has(.slider__button:hover) {
+      .slider__slide {
+        background-color: $accent;
+      }
+    }
+
+    .slider__buttons {
+      height: 4rem;
+    }
+  }
+}

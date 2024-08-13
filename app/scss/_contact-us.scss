@@ -1,0 +1,82 @@
+.contact-us {
+  padding: 6rem 0;
+  background-color: $bg-alt;
+  font-size: 2rem;
+}
+
+.contact-us__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+h2,
+.contact-us__willingness {
+  text-align: center;
+}
+
+.contact-us__form {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > *:not(:is(fieldset, button)) {
+    margin-bottom: 2rem;
+  }
+
+  fieldset {
+    @include bp($bp768-1, "max") {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include bp($bp768, "min") {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    gap: 2rem;
+    width: 100%;
+    border: none;
+    margin-bottom: 0.8rem;
+
+    textarea {
+      grid-column: 1 / span 2;
+      height: 13.5rem;
+    }
+  }
+
+  .legend {
+    font-size: 1.6rem;
+    color: #000;
+    align-self: flex-start;
+
+    span:first-child {
+      color: $red;
+      font-weight: bold;
+    }
+  }
+
+  .contact-us__submit {
+    width: 25rem;
+    padding: 1.6rem 0;
+    border-radius: 2px;
+    font-family: $ff-primary;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background-color: $accent;
+    color: $white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $accent-light;
+    }
+
+    &:active {
+      background-color: $accent-dark;
+    }
+  }
+}

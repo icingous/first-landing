@@ -1,0 +1,46 @@
+.reputation {
+  padding: 6rem 0 8.4rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .best {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include bp($bp1200, "min") {
+      gap: 6.6rem;
+    }
+
+    @include bp($bp1200, "max") {
+      gap: 3.2rem;
+    }
+  }
+
+  .best__item {
+    width: 29.2rem;
+    height: 19.8rem;
+    padding: 2.4rem;
+    border: 1px solid $secondary-light;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    .best__icon {
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+
+    .best__title {
+      font-size: 2rem;
+    }
+
+    .best__description {
+      font-size: 1.6rem;
+      color: $secondary;
+    }
+  }
+}

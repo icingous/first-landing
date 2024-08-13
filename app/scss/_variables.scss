@@ -1,0 +1,32 @@
+/*breakpoints*/
+$bp1200: 1200px;
+$bp1024: 1024px;
+$bp1024-1: 1023.98px;
+$bp768: 768px;
+$bp768-1: 767.98px;
+$bp480: 480px;
+$bp480-1: 479.98px;
+$bp375: 375px;
+$bp375-1: 374.98px;
+
+/*colors*/
+$primary: #14171f;
+$secondary: #858ead;
+$secondary-light: #e0e3eb;
+$secondary-medium: #c2c7d6;
+$secondary-semi: #667299;
+$secondary-dark: hsl(227, 20%, 40%);
+$warning: #f9995d;
+$warning-dark: #fa7b26;
+$warning-active: #da6518;
+$error: #ed6565;
+$red: #c40303;
+$white: #fff;
+$accent: #2947a9;
+$accent-light: #3559c7;
+$accent-dark: #292e3d;
+$bg-alt: #f6f8f7;
+$placeholder: #a3aac2;
+
+/*fonts*/
+$ff-primary: "Work Sans", sans-serif;

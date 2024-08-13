@@ -1,0 +1,60 @@
+:root {
+  font-size: 10px;
+}
+
+html,
+body {
+  height: 100%;
+  color: $primary;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  &:has(.menu.visible) {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  padding: 20px 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+
+  &.container--normal {
+    max-width: 124rem;
+  }
+
+  &.container--small {
+    max-width: 103.2rem;
+  }
+
+  &.container--form {
+    max-width: 61.6rem;
+    padding: 0 1.2rem;
+  }
+}
+
+.relative {
+  position: relative;
+}

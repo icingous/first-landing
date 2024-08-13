@@ -1,0 +1,65 @@
+.about-us__content {
+  margin-bottom: 12.8rem;
+  padding: 7.4rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  picture {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 1.2rem;
+    bottom: 0;
+    border-radius: 2px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  article {
+    max-width: 48.8rem;
+    padding: 5rem 6rem 5rem 4rem;
+    border-radius: 2px;
+    background-color: $accent;
+    color: $white;
+
+    h2 {
+      margin-bottom: 3.8rem;
+    }
+
+    .about-us__description {
+      margin-bottom: 7.4rem;
+
+      p {
+        font-size: 2rem;
+      }
+      p:first-child {
+        margin-bottom: 2rem;
+      }
+    }
+
+    a {
+      display: inline-block;
+      padding: 1.6rem 2rem;
+      border-radius: 0.6rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      background-color: $white;
+      color: $accent;
+    }
+  }
+
+  @include bp($bp1024-1, "max") {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+    padding: 0;
+    max-width: 48.8rem;
+    margin: 0 auto;
+
+    picture {
+      position: static;
+      height: 67rem;
+    }
+  }
+}

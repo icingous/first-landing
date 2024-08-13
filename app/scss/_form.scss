@@ -1,0 +1,91 @@
+.form-control {
+  position: relative;
+  background-color: $white;
+
+  input,
+  select,
+  textarea {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:not(select):not(:placeholder-shown) + .placeholder {
+      display: none;
+    }
+
+    &:is(select:not(:invalid)) + .placeholder {
+      display: none;
+    }
+
+    &:is(select:focus:invalid) + .placeholder {
+      display: block;
+    }
+
+    &[required] + .placeholder {
+      &::after {
+        content: '*';
+        color: $error;
+        font-weight: bold;
+      }
+    }
+
+    &:focus + .placeholder {
+      display: none;
+    }
+  }
+
+  .placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border: none;
+    color: $placeholder;
+  }
+
+  &:has(select)::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    width: 2rem;
+    background: url(../img/drop-down-arrow.svg) no-repeat center / contain;
+  }
+}
+
+input,
+select,
+textarea,
+.placeholder {
+  padding: 0.8rem;
+  border: 1px solid $secondary-light;
+  border-radius: 0.4rem;
+  font-family: $ff-primary;
+  font-size: 1.8rem;
+}
+
+input,
+select,
+textarea,
+.placeholder {
+  width: 100%;
+}
+
+select {
+  height: 4rem;
+  padding: 0.8rem 0.3rem;
+  appearance: none;
+
+  option:disabled {
+    color: $placeholder;
+  }
+}
+
+*::placeholder {
+  color: $placeholder;
+}

@@ -1,0 +1,5 @@
+@mixin bp($breakPoint, $direction) {
+  @media screen and (#{$direction}-width: $breakPoint) {
+    @content;
+  }
+}
