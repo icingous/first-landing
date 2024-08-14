@@ -1,5 +1,9 @@
 :root {
   font-size: 10px;
+
+  @include bp($bp480, "max") {
+    font-size: calc(10vw / 48 * 10);
+  }
 }
 
 html,
